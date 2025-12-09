@@ -1,0 +1,9 @@
+Cambiar password
+$passwd
+
+Saber el usuario logueado
+$whoami
+
+Ver los miembros de un grupo 
+$getent group users
+$grep '^users:' /etc/group
