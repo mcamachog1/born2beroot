@@ -22,23 +22,24 @@ Advantages: Separate partitions for /var and /srv, is generally considered **mor
 
 <ins>Security Configuration:<ins> The following tools were installed:
 
-AppArmor:is a Mandatory Access Control security system. Restricts the capabilities of individual programs on your system. It operates by using profiles for programs. A program (like an SSH service or a web server) can only access the resources defined in its profile. (It is installed by default with Debian)
-Firewall: UFW (Uncomplicated Firewall) 
-sudo: allow users to execute commands with privileges of root, keep a log of commands
-libpam-pwquality: password policy manager
+.- AppArmor:is a Mandatory Access Control security system. Restricts the capabilities of individual programs on your system. It operates by using profiles for programs. A program (like an SSH service or a web server) can only access the resources defined in its profile. (It is installed by default with Debian)
+.- Firewall: UFW (Uncomplicated Firewall) 
+.- sudo: allow users to execute commands with privileges of root, keep a log of commands
+.- libpam-pwquality: password policy manager
 
-4. For password policy configuration the following files were modified: 
+For <ins>password policy configuration<ins> the following files were modified: 
 	1) Configuration file /etc/login.defs was modified
 	2) From libpam-pwquality, file /etc/pam.d/common-password
 
-5. For system monitoring: A Bash script named monitoring.sh was implemented to display information about the system. The scripts is located in /usr/local/bin and its run with the root crontab -e. It runs each 10 minutes.
+For <ins>system monitoring:<ins> A Bash script named monitoring.sh was implemented to display information about the system. The scripts is located in /usr/local/bin and its run with the root crontab -e. It runs each 10 minutes.
 
-6. For SSH service VM used port 4242 and Host Machine port 2222
+For <ins>SSH service<ins> VM used port 4242 and Host Machine port 2222
 
 ![Ports Forwading](portsforwading.png)
 
 ## Resources
 Used this online guides
+
 [Guia 1]: https://github.com/chlimous/42-born2beroot_guide?tab=readme-ov-file#operating-system-installation
 
 [Guia 2]:https://noreply.gitbook.io/born2beroot/installing-the-virtual-machine/virtual-machine-iso
