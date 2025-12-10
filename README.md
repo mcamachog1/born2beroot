@@ -80,6 +80,7 @@ $ ufw enable
 
 ### Check ufw status
 $ systemctl status ufw
+$ sudo ufw status
 
 ### Install and config sudo
 $ apt install sudo
@@ -98,17 +99,17 @@ $ groupadd user42
 ### List groups
 $ getent group | awk -F: '{ print $1 }'
 
-### List the users of a group
-$ getent group nombre_del_grupo
+### List the gruops of a user
+$ groups macamach
+
+### Add a new user
+$ sudo adduser rafael
 
 ### Add a user to a group
 $ sudo usermod -a -G user42,sudo macamach
 
 ### List users of a group
 $ getent group sudo
-
-### Add a new user
-$ sudo adduser rafael
 
 ### Apply password policies by command
 $ chage -M 30 username | Sets PASS_MAX_DAYS to 30 days
@@ -123,8 +124,17 @@ $ passwd user
 ### Open crontab
 $ crontab -e
 
-### Check ssh status
+### Check ssh statusudo ufw statuss
 $ systemctl status ssh
 
 ### Restart ssh service
 $ systemctl restart ssh
+
+### Open ports
+$ ss -tunlp
+
+### Change password
+$ passwd
+
+### Loged user
+$ whoami
